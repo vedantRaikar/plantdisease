@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Video Stream</title>
+  </head>
+  <body>
+    <video id="video-stream" width="640" height="480" autoplay></video>
+    <script>
+      // Get the video element
+      const video = document.getElementById('video-stream');
+
+      // Get the user's media stream
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => {
+          // Set the video element's source to the user's media stream
+          video.srcObject = stream;
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    </script>
+  </body>
+</html>

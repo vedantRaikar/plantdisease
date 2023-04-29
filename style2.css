@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    
+}
+html, body{
+    font-size: 62.5%;
+    overflow-x:hidden;
+    height: 100%;
+}
+.main{
+    background: url(https://wallpaperaccess.com/full/17093.jpg);
+    background-size: cover;
+    background-position: center;
+    color : #fff;
+    height: 100%;
+}
+#head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    padding-top: 5%;
+    color: #434343;
+}
+.image img{
+    height: 400px;
+    width: 300px;
+    border-radius: 20px;
+    border-color: #434343;
+    opacity: 0.8;
+}
+.image{
+    padding-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.disease{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom:10%;
+}
+.tell{
+    width: fit-content;
+}
+p.give{
+    font-size: 20px;
+    width: 400px;
+    margin-top: 3%;
+    background: #434343;
+    opacity: 0.8;
+    padding: 2%;
+    border-radius: 10px;
+    overflow: hidden;
+    /* margin-bottom: 80%; */
+    
+  }
+  
+#description{
+    font-size: 18px;
+    margin-top: 3%;
+    background: #434343;
+    opacity: 0.8;
+    padding: 1%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.image {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    
+  }
+  .desc{
+    margin-top: 5px;
+    background: #434343;
+    opacity: 0.8;
+    font-size: 18px;
+    padding: 2%;
+    border-radius: 10px;
+  }
+  #solution{
+    font-size: 18px;
+    margin-top: 3%;
+    background: #434343;
+    opacity: 0.8;
+    padding: 1%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+  }
+  .sol{
+    margin-top: 5px;
+    background: #434343;
+    opacity: 0.8;
+    font-size: 18px;
+    padding: 2%;
+    border-radius: 10px;
+  }

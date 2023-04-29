@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant</title>
+ 
+    
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="main">
+
+       
+        <header class="header">
+            <a href = "#" class = "logo">Agriculture</a>
+        
+            <nav class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <div class="dropdown-agri">
+                  <a href="#agriculture" class="dropbtn">Agriculture</a>
+                  <div class="dropdown-content">
+                    <a href="#agriculture">Plants</a>
+                    <a href="#agriculture">Soil</a>
+                  </div>
+                </div>
+                <a href="login.html">Login</a>
+                <button class="button" onclick="clicked()">
+                  <i class="fa-solid fa-bars fa-2xl"></i>
+                </button>
+              </nav>
+              
+        <div class="dropdown">
+            <a href = "#home" class = "active">Home</a>
+            <a href = "#about">About</a>
+            <a href = "#agriculture">Agriculture</a>
+            <a href = "login.html">Login</a> 
+        </div>
+    </header>
+    
+
+    <section class="home" id = "home">
+        <div class = "home-content">
+            <ul class = "dynamic-txts">
+                <li><span>Hello</span></li>
+                <li><span>नमस्ते</span></li>
+                <li><span>ನಮಸ್ಕಾರ</span></li>
+                <li><span>ਸਤ ਸ੍ਰੀ ਅਕਾਲ</span></li>
+                <li><span>नमस्कार</span></li>
+                <li><span>নমস্কাৰ</span></li>
+                <li><span>નમસ્તે</span></li>
+            </ul>
+        </div>
+    </section>
+    
+
+    <section class = "about" id = "about">
+        <div class = "about-img">
+            <img src = "myimage1.jpeg" alt="">
+        </div>
+        
+        <div class = "about-content">
+            <h2 class = "heading">About<span> Us</span></h2>
+            <p class="words">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione reprehenderit, voluptatem ipsum provident voluptas id quas ab eius, fuga esse suscipit. Necessitatibus aut tempore totam atque sunt repellat modi, ipsam, quaerat enim eos optio culpa ex exercitationem distinctio aspernatur nisi non nesciunt vitae minus!</p>
+        </div>
+    </section>
+    <section class="agriculture" id="agriculture">
+        <div class="agri-content">
+            <h2 class="heading">Plants</h2>
+            <p class="words">Plant diseases are caused by pathogens such as fungi, bacteria, viruses, and other organisms that affect the growth, yield, and quality of crops. These diseases can have a significant impact on agriculture and the environment, leading to reduced yields, increased costs, and potential food shortages.
+
+                Modern technology can play a critical role in managing plant diseases. For instance, advanced diagnostic tools such as DNA sequencing and machine learning algorithms can quickly identify pathogens and help farmers make informed decisions about treatment options.
+
+                Similarly, precision agriculture technologies, such as drones and sensors, can provide real-time data on plant health and environmental conditions, allowing farmers to monitor crops and respond quickly to disease outbreaks.</p>
+            <p id="in">To check for diseases</p>
+            <div class="camera-id">
+                <button id="open-camera">Open Camera</button>
+                <span id="mid">or</span>
+                <button id="upload" onclick="document.getElementById('file-input').click()">Upload the file to the location</button>
+                <input id="file-input" type="file" style="display:none">
+                <a href="submit.html"><button id="result">Result</button></a>
+
+            </div>
+            <h2 class="heading-1">Soil</h2>
+            <p class="words-1">Soil diseases are caused by various pathogens that affect the soil and can lead to significant crop damage and yield losses. These pathogens can be fungi, bacteria, viruses, or nematodes that live and reproduce in the soil, making them difficult to control.
+
+                Modern technology can play a significant role in managing soil diseases. For instance, molecular diagnostic tools such as DNA sequencing and gene-based tests can identify the presence and type of pathogens in soil samples. This information can help farmers select the most effective management strategies, such as crop rotation, soil fumigation, or the use of resistant varieties.
+                
+                Similarly, precision agriculture technologies, such as sensors and drones, can provide real-time data on soil moisture, nutrient levels, and other environmental factors that can affect disease development. This information can help farmers make more informed decisions about irrigation, fertilization, and other management practices.</p>
+                <p id="out">To Check for Soil Types</p>
+            <div class="camera-id">
+                <button id="open-camera-2">Open Camera</button>
+                <span id="mid">or</span>
+                <button id="upload" onclick="document.getElementById('file-input').click()">Upload the file to the location</button>
+                <input id="file-input" type="file" style="display:none">
+             </div>   
+        </div>
+    </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

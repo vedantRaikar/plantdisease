@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	<link rel="stylesheet" type="text/css" href="loginstyle.css">
+</head>
+<body>
+    <div class="main">
+
+        <div class="login-box">
+            <div class="tabs">
+                <button class="tablinks active" onclick="openTab(event, 'login-tab')">Login</button>
+                <button class="tablinks" onclick="openTab(event, 'signup-tab')">Sign Up</button>
+            </div>
+            <div id="login-tab" class="tabcontent">
+                <h2>Login</h2>
+                <form>
+                    <div class="user-box">
+					<input type="text" name="username" required="">
+					<label>Username</label>
+				</div>
+				<div class="user-box">
+                    <input type="password" name="password" required="">
+					<label>Password</label>
+				</div>
+				<button type="submit" onclick="login()">Submit</button>
+			</form>
+		</div>
+		<div id="signup-tab" class="tabcontent">
+            <h2>Sign Up</h2>
+			<form>
+				<div class="user-box">
+					<input type="text" name="new-username" required="">
+					<label>Username</label>
+				</div>
+				<div class="user-box">
+                    <input type="password" name="new-password" required="">
+					<label>Password</label>
+				</div>
+				<button type="submit" onclick="signup()">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+	<script type="text/javascript" src="loginscript.js"></script>
+</body>
+</html>
