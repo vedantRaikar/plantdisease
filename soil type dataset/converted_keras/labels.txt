@@ -1,0 +1,5 @@
+0 black soil
+1 clinder soil
+2 laterite soil
+3 peat soil
+4 yellow soil 

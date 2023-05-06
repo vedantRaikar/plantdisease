@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant</title>
+
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    
+}
+
+:root{ /*The <html> HTML element represents the root (top-level element) of an HTML document */
+    --bg-color:#ffffff;
+    --second-bg-color:#323946;
+    --text-color:#202020;
+    --main-color:#800080;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x:hidden;
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+    display: flex;
+}
+
+.main{
+    background:url(https://wallpaperaccess.com/full/5207979.jpg);
+    background-size: cover;
+    background-position: center;
+    color : #fff;
+}
+
+.header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding: 2rem 9%;
+    background:transparent;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    z-index: 100;
+}
+
+.logo{
+    font-size:2.5rem;
+    color: #4e4e4e;
+    font-weight: 700;
+    cursor: default;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar a{
+    font-size : 1.7rem;
+    color: #4e4e4e;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8.98rem;
+    transition: .3s;
+}
+.navbar .button{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.navbar .button .fa-solid{
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+}
+
+.navbar a:hover{
+    color:#fff;
+    background: #4e4e4e;
+    border-radius: 15px;
+    padding: 8px;
+    font-weight: 500;
+}
+
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: #fff;
+    display: none;
+}
+
+.home{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.about .about-content{
+    background: #251714;    
+    opacity: 0.5;
+    padding: 5%;
+    
+}
+.agriculture .agri-content{
+    background: #251714;    
+    opacity: 0.5;
+    padding: 5%;
+    width: 100%;
+
+}
+
+.heading{
+    font-size:25px ;
+}
+.words{
+    font-size: 18px;
+}
+
+.home-img img{
+    height: 35vw;
+
+}
+ 
+.home-content h1{
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    
+}
+
+.home .dynamic-txts{
+    height: 80px;
+    color: #4e4e4e;
+    overflow: hidden;
+}
+.agri-content #in{
+    font-size:20px ;
+    padding-top:2%;
+}
+.heading-1{
+    font-size:25px ;
+    margin-top: 5%;
+}
+.words-1{
+    font-size: 18px;
+}
+#out{
+    font-size: 20px;
+    margin-top: 3%;
+
+}
+.dropdown-agri:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:transparent;
+    width: 300px;
+    z-index: 1;
+    transition: height .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  }
+  
+  .dropdown-content a {
+    margin-top: 2%;
+    color: #4e4e4e;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    margin-left: 6.98rem;
+    margin-right: 6.98rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #4e4e4e;
+    transition: 0.8;
+  }
+  #result{
+    height: 25px;
+    width: 150px;
+    border-radius: 10px;
+    opacity: 0.7;
+    cursor: pointer;
+    font-weight: 700;
+    margin-left: 1%;
+  }
+.dropdown{
+    display: block;
+    position: absolute;
+    right:2rem;
+    top:60px;
+    height: 0px;
+    width:300px;
+    background: #b6b3b3;
+    font-size: 20px;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown a:hover{
+    color: #fff;
+    background: #4e4e4e;
+    border-radius: 15px;
+    padding: 8px;
+    font-weight: 500;
+    transition: .5s;
+    
+}
+ .open{
+    height: 240px;
+
+}
+
+.navbar button {
+    background: transparent;    
+}
+.dropdown a{
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    color: #323946;
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.dynamic-txts li{
+    list-style: none;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slides 24s steps(8) infinite;
+  
+}
+
+.dynamic-txts li span{
+    position: relative;
+    text-shadow: 0 0 10px #545454;
+    
+}
+
+@keyframes slides {
+    100%{
+        top: -720px;
+    }
+}
+
+.dynamic-txts li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height:100%;
+    width: 100%;
+    background:linear-gradient(to top,#d7cdce,#d5cbcc);
+    border-left: 2px solid #717171;
+    animation:typing 3s steps(20) infinite;
+
+}
+#open-camera{
+    height: 25px;
+    width: 150px;
+    border-radius: 10px;
+    opacity: 0.7;
+    cursor: pointer;
+    font-weight: 700;
+    margin-right: 1%;
+}
+#open-camera-2{
+    height: 25px;
+    width: 150px;
+    border-radius: 10px;
+    opacity: 0.7;
+    cursor: pointer;
+    font-weight: 700;
+    margin-right: 1%;
+}
+#mid{
+    font-size: 20px;
+}
+#upload{
+    height: 25px;
+    width: fit-content;
+    border-radius: 10px;
+    opacity: 0.7;
+    cursor: pointer;
+    font-weight: 700;
+    margin-left: 1%;
+    padding: 2px;
+}
+
+@keyframes typing{
+    40%, 60%{
+        left: calc(100% + 30px);
+    }
+    100%{
+        left: 0;
+    }
+}
+
+@media(max-width: 768px){
+    .navbar a,
+    .navbar .button{
+        display:none;
+    }
+    .navbar .button{
+        display: block;
+    }
+    .dropdown{
+        display: block;
+    }
+}
+
+    </style>
+
+</head>
+
+<body>
+    <div class="main">
+
+
+        <header class="header">
+            <a href="#" class="logo">Agriculture</a>
+
+            <nav class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <div class="dropdown-agri">
+                    <a href="#agriculture" class="dropbtn">Agriculture</a>
+                    <div class="dropdown-content">
+                        <a href="#agriculture">Plants</a>
+                        <a href="#agriculture">Soil</a>
+                    </div>
+                </div>
+                <a href="login.html">Login</a>
+                <button class="button" onclick="clicked()">
+                    <i class="fa-solid fa-bars fa-2xl"></i>
+                </button>
+            </nav>
+
+            <div class="dropdown">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#agriculture">Agriculture</a>
+                <a href="login.html">Login</a>
+            </div>
+        </header>
+
+
+        <section class="home" id="home">
+            <div class="home-content">
+                <ul class="dynamic-txts">
+                    <li><span>Hello</span></li>
+                    <li><span>नमस्ते</span></li>
+                    <li><span>ನಮಸ್ಕಾರ</span></li>
+                    <li><span>ਸਤ ਸ੍ਰੀ ਅਕਾਲ</span></li>
+                    <li><span>नमस्कार</span></li>
+                    <li><span>নমস্কাৰ</span></li>
+                    <li><span>નમસ્તે</span></li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section class="about" id="about">
+            <div class="about-img">
+                <img src="myimage1.jpeg" alt="">
+            </div>
+
+            <div class="about-content">
+                <h2 class="heading">About<span> Us</span></h2>
+                <p class="words">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione
+                    reprehenderit, voluptatem ipsum provident voluptas id quas ab eius, fuga esse suscipit.
+                    Necessitatibus aut tempore totam atque sunt repellat modi, ipsam, quaerat enim eos optio culpa ex
+                    exercitationem distinctio aspernatur nisi non nesciunt vitae minus!</p>
+            </div>
+        </section>
+        <section class="agriculture" id="agriculture">
+            <div class="agri-content">
+                <h2 class="heading">Plants</h2>
+                <p class="words">Plant diseases are caused by pathogens such as fungi, bacteria, viruses, and other
+                    organisms that affect the growth, yield, and quality of crops. These diseases can have a significant
+                    impact on agriculture and the environment, leading to reduced yields, increased costs, and potential
+                    food shortages.
+
+                    Modern technology can play a critical role in managing plant diseases. For instance, advanced
+                    diagnostic tools such as DNA sequencing and machine learning algorithms can quickly identify
+                    pathogens and help farmers make informed decisions about treatment options.
+
+                    Similarly, precision agriculture technologies, such as drones and sensors, can provide real-time
+                    data on plant health and environmental conditions, allowing farmers to monitor crops and respond
+                    quickly to disease outbreaks.</p>
+                <p id="in">To check for diseases</p>
+                <div class="camera-id">
+                    <button id="open-camera">Open Camera</button>
+                    <span id="mid">or</span>
+                    <button id="upload" onclick="document.getElementById('file-input').click()">Upload the file to the
+                        location</button>
+                    <input id="file-input" type="file" style="display:none">
+                    <a href="submit.html"><button id="result">Result</button></a>
+
+                </div>
+                <h2 class="heading-1">Soil</h2>
+                <p class="words-1">Soil diseases are caused by various pathogens that affect the soil and can lead to
+                    significant crop damage and yield losses. These pathogens can be fungi, bacteria, viruses, or
+                    nematodes that live and reproduce in the soil, making them difficult to control.
+
+                    Modern technology can play a significant role in managing soil diseases. For instance, molecular
+                    diagnostic tools such as DNA sequencing and gene-based tests can identify the presence and type of
+                    pathogens in soil samples. This information can help farmers select the most effective management
+                    strategies, such as crop rotation, soil fumigation, or the use of resistant varieties.
+
+                    Similarly, precision agriculture technologies, such as sensors and drones, can provide real-time
+                    data on soil moisture, nutrient levels, and other environmental factors that can affect disease
+                    development. This information can help farmers make more informed decisions about irrigation,
+                    fertilization, and other management practices.</p>
+                <p id="out">To Check for Soil Types</p>
+                <div class="camera-id">
+                    <button id="open-camera-2">Open Camera</button>
+                    <span id="mid">or</span>
+                    <button id="upload" onclick="document.getElementById('file-input').click()">Upload the file to the
+                        location</button>
+                    <input id="file-input" type="file" style="display:none">
+                    <a href="submit1"><button id="result">Result</button></a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
